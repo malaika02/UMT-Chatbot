@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- General Scholarship Query -->
+    <category>
+        <pattern>WHAT SCHOLARSHIPS ARE AVAILABLE</pattern>
+        <template>
+            UMT offers various scholarships to support students based on merit, need, and special circumstances. The main types include:
+            - Merit-Based Scholarships: For high-achieving students based on academic performance.
+            - Need-Based Financial Assistance (Qarz-e-Hassana): For financially deserving students, repayable in installments.
+            - Special Scholarships: For specific groups like minority students, disabled students, and exceptional sports achievers.
+            Ask more specific questions like "Tell me about merit scholarships" or "What is Qarz-e-Hassana?" for details.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SCHOLARSHIPS *</pattern>
+        <template>
+            <srai>WHAT SCHOLARSHIPS ARE AVAILABLE</srai>
+        </template>
+    </category>
+
+    <!-- Merit-Based Scholarships -->
+    <category>
+        <pattern>WHAT IS A MERIT SCHOLARSHIP</pattern>
+        <template>
+            Merit-based scholarships are awarded to students who achieve high academic performance. They cover tuition fees ranging from 20% to 100%, depending on the student's grades and achievements.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* MERIT SCHOLARSHIP *</pattern>
+        <template>
+            <srai>WHAT IS A MERIT SCHOLARSHIP</srai>
+        </template>
+    </category>
+
+    <!-- Need-Based Financial Assistance -->
+    <category>
+        <pattern>WHAT IS QARZ-E-HASSANA</pattern>
+        <template>
+            The Qarz-e-Hassana program provides financial assistance to needy students. Key details:
+            - Repayable in 3-5 years after graduation in easy monthly installments.
+            - Eligibility determined by documents like income certificates, utility bills, and property records.
+            The final transcript is issued after complete repayment.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* QARZ-E-HASSANA *</pattern>
+        <template>
+            <srai>WHAT IS QARZ-E-HASSANA</srai>
+        </template>
+    </category>
+
+    <!-- Special Scholarships -->
+    <category>
+        <pattern>WHAT SPECIAL SCHOLARSHIPS ARE AVAILABLE</pattern>
+        <template>
+            Special scholarships include:
+            - Khurram Murad Scholarship: For outstanding foreign participants (50% tuition fee waiver).
+            - Shaheed Hakeem Said Scholarship: For students from remote areas outside Punjab (50% tuition fee waiver).
+            - Justice A R Cornelius Scholarship: For minority students (50% tuition fee waiver).
+            - Outstanding Sportsmen: 100% waiver for national-level athletes with at least 65% academic marks.
+        </template>
+    </category>
+
+    <!-- Application Process -->
+    <category>
+        <pattern>* FINANCIAL AID *</pattern>
+        <template>
+            To apply for financial aid:
+            - Submit the Qarz-e-Hassana form to the Registrar's Office.
+            - Attach required documents (e.g., income proof, utility bills, previous academic records).
+            - Applications are reviewed quarterly by the Financial Assistance and Loan Committee (FALC).
+        </template>
+    </category>
+
+    <!-- Scholarship Rules -->
+    <category>
+        <pattern>* SCHOLARSHIP RULES *</pattern>
+        <template>
+            Rules for scholarships include:
+            - Minimum CGPA for continuation is 3.0 for Bachelor's students.
+            - No default on tuition fees; failure leads to withdrawal of financial aid.
+            - Disciplinary breaches may result in immediate revocation of scholarships.
+        </template>
+    </category>
+
+    <!-- Wildcard-Based Query for Scholarship Type -->
+    <category>
+        <pattern>WHAT ABOUT * SCHOLARSHIPS</pattern>
+        <template>
+            We offer various scholarships based on merit, need, and special circumstances. Could you specify the type you're interested in, such as "merit-based", "need-based", or "sports scholarships"?
+        </template>
+    </category>
+
+    <!-- Wildcard for Specific Scholarship Details -->
+    <category>
+        <pattern>HOW MUCH DOES * SCHOLARSHIP COVER</pattern>
+        <template>
+            Scholarship coverage varies:
+            - Merit scholarships: 20% to 100% of tuition fees.
+            - Special scholarships: Up to 100% for athletes or students from remote areas.
+            Please specify the scholarship for further details.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE THE REQUIREMENTS FOR * SCHOLARSHIP</pattern>
+        <template>
+            Each scholarship type has its own eligibility requirements. For merit scholarships, a minimum CGPA of 3.0 is required. For Qarz-e-Hassana, financial need must be demonstrated through supporting documents. Could you specify the scholarship you're asking about?
+        </template>
+    </category>
+
+    <!-- Catch-All for Ambiguous Queries -->
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I’m sorry, I didn’t understand your question. Could you rephrase or specify the type of scholarship or financial aid you’re asking about?
+        </template>
+    </category>
+</aiml>

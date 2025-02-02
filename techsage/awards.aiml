@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+    <pattern>WHAT MERIT AWARDS ARE AVAILABLE AT UMT</pattern>
+    <pattern>LIST OF MERIT AWARDS AT UMT</pattern>
+    <template>
+        UMT offers the following merit awards for Bachelor's programs:
+        - Rector's Merit Award
+        - Dean's Merit Award
+        - Patron's Medal
+        - Rector's Medal
+        - Rector's Academic Excellence Award
+        - Special Medals
+        - Khurram Murad Medal
+        - Dr. Muhammad Ahmed Medal
+    </template>
+    </category>
+
+
+    <!-- Rector's Merit Award -->
+    <category>
+        <pattern>WHAT IS RECTORS MERIT AWARD</pattern>
+        <template>
+            The Rector's Merit Award is given to students with a Semester GPA of 4.00/4.00. 
+            To be eligible, participants must:
+            - Complete a minimum of 15 credit hours (excluding pre and non-GPA courses, internship, and final project).
+            - Have no "F", "W", or "SA" grades, and no course repeats.
+            - Not have been penalized due to disciplinary actions or unfair means.
+            The award includes a certificate and a tuition fee discount for six credit hours. This award is not applicable to MS/MPhil or PhD programs.
+        </template>
+    </category>
+    
+     <category>
+      <pattern> * RECTOR AWARD</pattern>
+      <template>
+          <srai>WHAT IS RECTORS MERIT AWARD</srai>
+      </template>
+  </category>
+  
+   <category>
+      <pattern> * RECTOR MERIT AWARD</pattern>
+      <template>
+          <srai>WHAT IS RECTORS MERIT AWARD</srai>
+      </template>
+  </category>
+
+    <!-- Dean's Merit Award -->
+    <category>
+        <pattern>WHAT IS DEANS MERIT AWARD</pattern>
+        <template>
+            The Dean's Merit Award is given to students with a Semester GPA of:
+            - 3.80/4.00 or above for MBA programs.
+            - 3.70/4.00 or above for Bachelor's and other Master’s programs.
+            To qualify, students must:
+            - Complete at least 15 credit hours (for Bachelor's) excluding pre and non-GPA courses, internship, and final project.
+            - Have no "F", "SA", or "W" grades, and no course repeats.
+            - Not be penalized due to disciplinary or unfair means.
+            The top ten participants in the program/batch who meet the criteria will receive a merit certificate and a fee discount for three credit hours.
+        </template>
+    </category>
+    
+     <category>
+      <pattern>* DEANS AWARD</pattern>
+      <template>
+          <srai>WHAT IS DEANS MERIT AWARD</srai>
+      </template>
+  </category>
+
+    <!-- Patron's Medal -->
+    <category>
+        <pattern>WHAT IS THE PATRON MEDAL</pattern>
+        <template>
+            The Patron's Medal (Gold) is awarded to the student with the highest CGPA (minimum 3.80) in each Bachelor's program. To qualify:
+            - The student must have completed the degree in the stipulated time.
+            - There should be no "F", "SA", or "W" grades, and no course repeats.
+            - No transfer cases or disciplinary actions.
+            This prestigious medal is awarded on convocation day.
+        </template>
+    </category>
+
+    <!-- Rector's Medal -->
+    <category>
+        <pattern>WHAT IS THE RECTOR MEDAL</pattern>
+        <template>
+            The Rector's Medal (Silver) is awarded to the student with the second-highest CGPA (minimum 3.70) in each Bachelor's program. Eligibility criteria:
+            - The student must have completed the degree in the stipulated time.
+            - No "F", "SA", or "W" grades, and no course repeats.
+            - No transfer cases or disciplinary actions.
+            This medal is awarded on convocation day.
+        </template>
+    </category>
+
+    <!-- Rector’s Academic Excellence Award -->
+    <category>
+        <pattern>WHAT IS THE RECTOR ACADEMIC EXCELLENCE AWARD</pattern>
+        <template>
+            The Rector’s Academic Excellence Award is given to students with the highest CGPA (minimum 3.80) in Bachelor's programs. To qualify:
+            - No "F", "SA", or "W" grades, and no course repeats.
+            - The student must have completed the degree in the stipulated time.
+            The award is presented during the convocation ceremony.
+        </template>
+    </category>
+
+    <!-- Special Medals -->
+    <category>
+        <pattern>WHAT ARE THE SPECIAL MEDALS</pattern>
+        <template>
+            Special medals are awarded for exceptional achievements in specific areas like:
+            - Academic excellence.
+            - Contributions to extracurricular activities and research.
+            - Outstanding leadership and innovation.
+            These medals are typically sponsored by various organizations and are awarded during convocation ceremonies.
+        </template>
+    </category>
+
+    <!-- Khurram Murad Medal -->
+    <category>
+        <pattern>WHAT IS THE KHURRAM MURAD MEDAL</pattern>
+        <template>
+            The Khurram Murad Medal is awarded to an outstanding MBA-level participant. Criteria include:
+            - Highest CGPA.
+            - No "F", "SA", or "W" grades, and no course repeats.
+            - Completion of degree within the normal time frame.
+            - No disciplinary actions or UMC (unfair means cases).
+            An interview will be conducted, and a cash prize of Rs 100,000 is awarded along with the medal and merit certificate.
+        </template>
+    </category>
+
+    <!-- Dr. Muhammad Ahmed Medal -->
+    <category>
+        <pattern>WHAT IS THE DR. MUHAMMAD AHMED MEDAL</pattern>
+        <template>
+            The Dr. Muhammad Ahmed Medal is awarded annually to an exceptional social sciences participant. Criteria include:
+            - Excellent CGPA.
+            - Completion of the degree within the stipulated time.
+            - No "F", "SA", or "W" grades.
+            - No disciplinary or unfair means cases.
+            - Contributions to society.
+            The award includes a gold medal, Rs 50,000 cash prize, and a merit certificate.
+        </template>
+    </category>
+
+    <!-- Additional Special Medals -->
+    <category>
+        <pattern>WHAT ARE THE OTHER SPECIAL MEDALS</pattern>
+        <template>
+            Other special medals include:
+            - Sardar Muhammad Ghalib Medal Award
+            - Haji Taj Din Medal Award
+            - Award for Exceptional Academic Excellence (given to students achieving a 4.00 CGPA).
+            These awards recognize outstanding students based on academic excellence and contributions to university life.
+        </template>
+    </category>
+
+</aiml>

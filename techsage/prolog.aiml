@@ -1,0 +1,297 @@
+<aiml version="2.0">
+
+    <!-- Patterns for AI Courses -->
+    <category>
+        <pattern>AI GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">AI</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for AI course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>AI TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">AI</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for AI semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>AI COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">AI</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching AI courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>AI LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">AI</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all AI courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>AI COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">AI</set>
+            Fetching the complete AI semester roadmap.
+        </template>
+    </category>
+
+    <!-- Patterns for DS Courses -->
+    <category>
+        <pattern>DS GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">DS</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for DS course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>DS TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">DS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for DS semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>DS COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">DS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching DS courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>DS LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">DS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all DS courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>DS COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">DS</set>
+            Fetching the complete DS semester roadmap.
+        </template>
+    </category>
+
+    <!-- Patterns for SE Courses -->
+    <category>
+        <pattern>SE GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">SE</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for SE course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>SE TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">SE</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for SE semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>SE COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">SE</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching SE courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>SE LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">SE</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all SE courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>SE COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">SE</set>
+            Fetching the complete SE semester roadmap.
+        </template>
+    </category>
+
+    <!-- Patterns for IT Courses -->
+    <category>
+        <pattern>IT GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">IT</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for IT course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>IT TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">IT</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for IT semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>IT COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">IT</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching IT courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>IT LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">IT</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all IT courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>IT COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">IT</set>
+            Fetching the complete IT semester roadmap.
+        </template>
+    </category>
+
+    <!-- Patterns for CS Courses -->
+    <category>
+        <pattern>CS GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">CS</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for CS course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CS TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">CS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for CS semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CS COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">CS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching CS courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CS LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">CS</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all CS courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CS COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">CS</set>
+            Fetching the complete CS semester roadmap.
+        </template>
+    </category>
+
+    <!-- Patterns for Cybersecurity Courses -->
+    <category>
+        <pattern>CYBERSECURITY GET PREREQUISITES FOR COURSE *</pattern>
+        <template>
+            <think>
+                <set name="domain">Cybersecurity</set>
+                <set name="course"><star/></set>
+            </think>
+            Fetching prerequisites for Cybersecurity course having code <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY TOTAL CREDIT HOURS IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">Cybersecurity</set>
+                <set name="semester"><star/></set>
+            </think>
+            Calculating total credit hours for Cybersecurity semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY COURSES WITHOUT PREREQUISITES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">Cybersecurity</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching Cybersecurity courses without prerequisites in semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY LIST ALL COURSES IN SEMESTER *</pattern>
+        <template>
+            <think>
+                <set name="domain">Cybersecurity</set>
+                <set name="semester"><star/></set>
+            </think>
+            Fetching all Cybersecurity courses for semester <star/>.
+        </template>
+    </category>
+    <category>
+        <pattern>CYBERSECURITY COMPLETE SEMESTER ROADMAP</pattern>
+        <template>
+            <set name="domain">Cybersecurity</set>
+            Fetching the complete Cybersecurity semester roadmap.
+        </template>
+    </category>
+
+</aiml>

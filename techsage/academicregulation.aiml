@@ -1,0 +1,171 @@
+<aiml version="2.0">
+    <!-- Academic Calendar -->
+    <category>
+        <pattern> * ACADEMIC CALENDAR * </pattern>
+        <template>
+            <srai>EXPLAIN ACADEMIC CALENDAR</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHEN DOES SEMESTER START *</pattern>
+        <template>
+            <srai>EXPLAIN THE ACADEMIC CALENDAR</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>EXPLAIN ACADEMIC CALENDAR</pattern>
+        <template>
+            The academic calendar includes semester start dates, holidays, dues payment deadlines, and final exam schedules. Participants are responsible for meeting all deadlines and adhering to university rules published in the calendar.
+        </template>
+    </category>
+
+    <!-- Schedule of Semesters -->
+    <category>
+        <pattern>WHAT IS THE SCHEDULE OF SEMESTERS</pattern>
+        <template>
+            <srai>EXPLAIN THE SCHEDULE OF SEMESTERS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW LONG IS A SEMESTER *</pattern>
+        <template>
+            <srai>EXPLAIN THE SCHEDULE OF SEMESTERS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHEN ARE SEMESTER BREAKS *</pattern>
+        <template>
+            <srai>EXPLAIN THE SCHEDULE OF SEMESTERS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>EXPLAIN THE SCHEDULE OF SEMESTERS</pattern>
+        <template>
+            There are two regular semesters (Fall and Spring), each consisting of 17 weeks (15 teaching weeks and 2 weeks for exams). Summer sessions are shorter, lasting 8 weeks, allowing registration for 1-2 courses.
+        </template>
+    </category>
+
+    <!-- Credit Hour -->
+    <category>
+        <pattern>DEFINE CREDIT HOUR</pattern>
+        <template>
+            A credit hour represents one hour of classroom instruction per week throughout the semester. For laboratory courses, one credit hour equals three lab contact hours per week.
+        </template>
+    </category>
+
+    <category>
+        <pattern> * CREDIT HOUR * </pattern>
+        <template>
+            <srai>DEFINE CREDIT HOUR</srai>
+        </template>
+    </category>
+
+    <!-- Course Categories -->
+    <category>
+        <pattern>WHAT ARE THE COURSE CATEGORIES</pattern>
+        <template>
+            <srai>EXPLAIN COURSE CATEGORIES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>EXPLAIN COURSE TYPES *</pattern>
+        <template>
+            <srai>EXPLAIN COURSE CATEGORIES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>EXPLAIN COURSE CATEGORIES</pattern>
+        <template>
+            Courses are categorized as:
+            - Compulsory
+            - General
+            - Foundation
+            - Major/Core
+            - Elective
+        </template>
+    </category>
+
+    <!-- Course Registration -->
+    <category>
+        <pattern>HOW DO I REGISTER FOR COURSES</pattern>
+        <template>
+            <srai>WHAT IS THE COURSE REGISTRATION PROCESS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE COURSE REGISTRATION PROCESS</pattern>
+        <template>
+            Course registration for continuing participants begins in the 13th week of the running semester via the OCRIS portal. Fresh participants can register on orientation day. Late registration is allowed in the first week with a daily fine of Rs. 500.
+        </template>
+    </category>
+
+    <!-- Late Registration -->
+    <category>
+        <pattern>WHAT IS LATE REGISTRATION</pattern>
+        <template>
+            <srai>CAN I REGISTER LATE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN I REGISTER LATE *</pattern>
+        <template>
+            Late registration is allowed up to the first week of classes with a fine of Rs. 500 per day. No registration is permitted after the first week.
+        </template>
+    </category>
+
+    <!-- Course Load Management -->
+    <category>
+        <pattern>WHAT IS THE COURSE LOAD MANAGEMENT POLICY</pattern>
+        <template>
+            <srai>HOW MANY COURSES CAN I TAKE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW MANY COURSES CAN I TAKE *</pattern>
+        <template>
+            Course load depends on CGPA. Full load is allowed for CGPA above 2.50. Lower CGPAs result in reduced course loads, and participants may face dismissal if CGPA requirements are not met in consecutive semesters.
+        </template>
+    </category>
+
+    <!-- Add/Drop Courses -->
+    <category>
+        <pattern>HOW CAN I ADD OR DROP COURSES</pattern>
+        <template>
+            <srai>WHAT IS THE ADD DROP POLICY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE ADD DROP POLICY</pattern>
+        <template>
+            Participants can add/drop courses within the first week of the semester by consulting their advisor and submitting the necessary form. Approval from the HoD is required for drops.
+        </template>
+    </category>
+
+    <!-- Class Attendance -->
+    <category>
+        <pattern>WHAT IS THE CLASS ATTENDANCE POLICY</pattern>
+        <template>
+            <srai>HOW MUCH ATTENDANCE *</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW MUCH ATTENDANCE *</pattern>
+        <template>
+            A minimum of 80% attendance is required to be eligible for the final exam. Participants with less than 80% attendance receive an "F" grade and must repeat the course.
+        </template>
+    </category>
+
+    <!-- Payment Policy -->
+    <category>
+        <pattern>WHAT IS THE PAYMENT POLICY</pattern>
+        <template>
+            <srai>HOW CAN I PAY MY DUES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW CAN I PAY MY DUES</pattern>
+        <template>
+            Dues can be paid in lump sum or installments. Late payments incur a fine of Rs. 100 per day. Payment can be made online or via bank challans.
+        </template>
+    </category>
+</aiml>

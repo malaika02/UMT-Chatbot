@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category>
+    <pattern>PROGRAMS</pattern>
+    <template>
+      The School of Systems and Technology (SST) offers several undergraduate programs. These include:
+      - BS Computer Science
+      - BS Software Engineering
+      - BS Information Technology
+      - BS Computing and Data Science
+      - BS Artificial Intelligence
+      For more details about each program, type the name of the program you'd like to know more about.
+    </template>
+  </category>
+
+  <!-- Undergraduate Programs Offered by SST -->
+  <category>
+    <pattern>WHAT UNDERGRADUATE PROGRAMS ARE OFFERED IN SST?</pattern>
+    <template>
+      <srai>PROGRAMS</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>* UNDERGRADUATE PROGRAMS *</pattern>
+    <template>
+      <srai>PROGRAMS</srai>
+    </template>
+  </category>
+
+  <!-- BS Computer Science Program -->
+  <category>
+    <pattern>* COMPUTER SCIENCE</pattern>
+    <template>
+      The BS Computer Science program at UMT is a 4-year degree program designed to provide students with a solid foundation in computer science and engineering. 
+      It covers areas like programming, algorithms, databases, and networking.
+      For admission details and fee structure, type "Admission Process" or "Fee Structure."
+    </template>
+  </category>
+
+  <!-- BS Software Engineering Program -->
+  <category>
+    <pattern>* SOFTWARE ENGINEERING</pattern>
+    <template>
+      The BS Software Engineering program is a 4-year degree program focused on the development of software applications, systems, and software architecture. 
+      Students will gain expertise in coding, testing, and maintaining software products.
+      For more details about courses or fees, type "Courses" or "Fee Structure."
+    </template>
+  </category>
+
+  <!-- BS Information Technology Program -->
+  <category>
+    <pattern>* INFORMATION TECHNOLOGY</pattern>
+    <template>
+      The BS Information Technology program is a 4-year degree program designed for students who wish to build careers in IT infrastructure, networking, and system administration. 
+      It includes hands-on training in networking, hardware, and IT project management.
+    </template>
+  </category>
+
+  <!-- BS Computing and Data Science Program -->
+  <category>
+    <pattern>* COMPUTING AND DATA SCIENCE</pattern>
+    <template>
+      The BS Computing and Data Science program is a 4-year degree program focused on data analysis, machine learning, and artificial intelligence. 
+      Students will learn how to process large datasets and gain valuable insights from data.
+    </template>
+  </category>
+
+  <!-- BS Artificial Intelligence Program -->
+  <category>
+    <pattern>* ARTIFICIAL INTELLIGENCE</pattern>
+    <template>
+      The BS Artificial Intelligence program at UMT is a 4-year degree program designed to equip students with knowledge of AI principles. It focuses on problem modeling, software design, development, and hardware systems. 
+      Students gain hands-on experience in AI, including areas like software verification, testing, and project management.
+    </template>
+  </category>
+  
+  <!-- Career Opportunities -->
+  <category>
+    <pattern>* CAREER OPPORTUNITIES AFTER *</pattern>
+    <template>
+      Graduates of the <star index="2"/> program can pursue careers in industry, commerce, government, and academia. They have opportunities in software development, AI-related fields, and can further their research in academia.
+    </template>
+  </category>
+   
+  <!-- Eligibility -->
+  <category>
+    <pattern>WHAT IS ADMISSION REQUIREMENTS FOR *</pattern>
+    <template>
+      To be eligible for the <star index="1"/>, candidates must meet one of the following requirements:
+      - At least 50% marks in Intermediate (HSSC) with Mathematics or equivalent.
+      - At least 50% marks in Intermediate (HSSC) with Pre-Medical or equivalent.
+      <b>Note:</b> Students from a Pre-Medical background must complete 6 credit hours of deficiency courses in Mathematics during the first two semesters.
+    </template>
+  </category>
+
+  <!-- Admission Process -->
+  <category>
+    <pattern>* ADMISSION PROCESS *</pattern>
+    <template>
+      To apply for a bachelor's program at UMT, follow these steps:
+      - Create an account on the UMT admissions portal.
+      - Complete the application form with necessary details.
+      - Submit the non-refundable application fee of Rs. 2000/- through HBL.
+      - Upload scanned copies of required documents (educational certificates, CNIC, photos, etc.).
+      - Submit your application and await further instructions.
+      For more details, please visit the official UMT admissions website:
+      <a href="https://admissions.umt.edu.pk/">UMT Admissions</a>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ADMISSION PROCESS</pattern>
+    <template>
+      <srai>* ADMISSION PROCESS *</srai>
+    </template>
+  </category>
+</aiml>

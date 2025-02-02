@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- Pattern for "What is the email of <faculty_name>" -->
+    <category>
+        <pattern>WHAT IS THE EMAIL OF *</pattern>
+        <template>
+        <think>
+            <set name="faculty_name"><star/></set>
+            <set name="query_type">email</set>
+        </think>
+        </template>
+    </category>
+
+    <!-- Additional categories as needed for other queries -->
+    <!-- Example for "What is the designation of <faculty_name>" -->
+    <category>
+        <pattern>WHAT IS THE DESIGNATION OF *</pattern>
+        <template>
+        <think>
+            <set name="faculty_name"><star/></set>
+            <set name="query_type">designation</set>
+        </think>
+        </template>
+    </category>
+</aiml>
+
+

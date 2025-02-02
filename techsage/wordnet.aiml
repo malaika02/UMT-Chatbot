@@ -1,0 +1,22 @@
+<aiml version="2.0">
+    <!-- Match patterns for word definitions -->
+    <category>
+        <pattern>DEFINE * </pattern>
+            <template><set name="word"><star/></set> is defined as <get name="definition"/></template>
+    </category>
+
+    <category>
+        <pattern> * DEFINITION OF * </pattern>
+              <template><set name="word"><star/></set> is defined as <get name="definition"/></template>
+    </category>
+    
+     <category>
+        <pattern>WHAT IS *</pattern>
+             <template><set name="word"><star/></set> is defined as <get name="definition"/></template>
+    </category>
+
+
+
+
+
+</aiml>

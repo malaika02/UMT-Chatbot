@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <!-- SST Fee Structure Main -->
+  <category>
+    <pattern>FEE STRUCTURE</pattern>
+    <template>
+      The School of Systems and Technology (SST) offers programs across multiple departments. Please select a department to view its fee structure:
+      - Type "Computer Science Fee" for the BS Computer Science department.
+      - Type "Software Engineering Fee" for the BS Software Engineering department.
+      - Type "Information Technology Fee" for the BS Information Technology department.
+      - Type "Artificial Intelligence Fee" for the BS Artificial Intelligence department.
+      - Type "Computing and Data Science Fee" for the BS Computing and Data Science department.
+    </template>
+  </category>
+  
+  <category>
+      <pattern> * FEE STRUCTURE * </pattern>
+      <template>
+        The School of Systems and Technology (SST) offers programs across multiple departments. Please select a department to view its fee structure:
+      - Type "Computer Science Fee" for the BS Computer Science department.
+      - Type "Software Engineering Fee" for the BS Software Engineering department.
+      - Type "Information Technology Fee" for the BS Information Technology department.
+      - Type "Artificial Intelligence Fee" for the BS Artificial Intelligence department.
+      - Type "Computing and Data Science Fee" for the BS Computing and Data Science department.
+      </template>
+  </category>
+  
+  <!-- BS Computer Science Fee -->
+  <category>
+    <pattern>COMPUTER SCIENCE FEE</pattern>
+    <template>
+      The fee for the BS Computer Science program is:
+      - Per Semester Fee: PKR 124,375
+      - Complete Degree Fee (8 semesters): PKR 1,990,000
+    </template>
+  </category>
+  
+  <category>
+    <pattern>What is COMPUTER SCIENCE FEE</pattern>
+    <template>
+        <srai>COMPUTER SCIENCE FEE</srai>
+    </template>
+  </category>
+    
+  <category>
+    <pattern> * COMPUTER SCIENCE FEE * </pattern>
+    <template>
+        <srai>COMPUTER SCIENCE FEE</srai>
+    </template>
+  </category>
+
+  <!-- BS Software Engineering Fee -->
+  <category>
+    <pattern>SOFTWARE ENGINEERING FEE</pattern>
+    <template>
+      The fee for the BS Software Engineering program is:
+      - Per Semester Fee: PKR 118,125
+      - Complete Degree Fee (8 semesters): PKR 1,890,000
+    </template>
+  </category>
+
+   <category>
+    <pattern>* SOFTWARE ENGINEERING FEE *</pattern>
+    <template>
+        <srai>SOFTWARE ENGINEERING FEE</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>WHAT IS SOFTWARE ENGINEERING FEE</pattern>
+    <template>
+        <srai>SOFTWARE ENGINEERING FEE</srai>
+    </template>
+  </category>
+
+
+  <!-- BS Information Technology Fee -->
+  <category>
+    <pattern>INFORMATION TECHNOLOGY FEE</pattern>
+    <template>
+      The fee for the BS Information Technology program is:
+      - Per Semester Fee: PKR 99,375
+      - Complete Degree Fee (8 semesters): PKR 1,590,000
+    </template>
+  </category>
+  
+  <category>
+    <pattern> WHAT IS INFORMATION TECHNOLOGY FEE</pattern>
+    <template>
+        The fee for the BS Information Technology program is:
+      - Per Semester Fee: PKR 99,375
+      - Complete Degree Fee (8 semesters): PKR 1,590,000
+    </template>
+  </category>
+    
+  <category>
+    <pattern> * INFORMATION TECHNOLOGY FEE * </pattern>
+    <template>
+        The fee for the BS Information Technology program is:
+      - Per Semester Fee: PKR 99,375
+      - Complete Degree Fee (8 semesters): PKR 1,590,000
+    </template>
+  </category>
+
+  <!-- BS Artificial Intelligence Fee -->
+  <category>
+    <pattern>ARTIFICIAL INTELLIGENCE FEE</pattern>
+    <template>
+      The fee for the BS Artificial Intelligence program is:
+      - Per Semester Fee: PKR 105,625
+      - Complete Degree Fee (8 semesters): PKR 1,690,000
+    </template>
+  </category>
+  
+  <category>
+    <pattern> WHAT IS ARTIFICIAL INTELLIGENCE FEE</pattern>
+    <template>
+        The fee for the BS Artificial Intelligence program is:
+      - Per Semester Fee: PKR 105,625
+      - Complete Degree Fee (8 semesters): PKR 1,690,000
+    </template>
+  </category>
+    
+  <category>
+    <pattern> * ARTIFICIAL INTELLIGENCE FEE * </pattern>
+    <template>
+       The fee for the BS Artificial Intelligence program is:
+      - Per Semester Fee: PKR 105,625
+      - Complete Degree Fee (8 semesters): PKR 1,690,000
+    </template>
+  </category>
+
+  <!-- BS Computing and Data Science Fee -->
+  <category>
+    <pattern>COMPUTING AND DATA SCIENCE FEE</pattern>
+    <template>
+      The fee for the BS Computing and Data Science program is:
+      - Per Semester Fee: PKR 99,374
+      - Complete Degree Fee (8 semesters): PKR 1,590,000
+    </template>
+  </category>
+  
+    <category>
+    <pattern> * DATA SCIENCE FEE * </pattern>
+    <template>
+       The fee for the BS Computing and Data Science program is:
+      - Per Semester Fee: PKR 99,374
+      - Complete Degree Fee (8 semesters): PKR 1,590,000
+    </template>
+  </category>
+
+
+</aiml>
