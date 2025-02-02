@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat System</title>
+  <link rel="stylesheet" href="static/styles/main.css">
+  <link rel="stylesheet" href="static/styles/chat.css">
+  <link rel="stylesheet" href="static/styles/sidebar.css">
+  <link rel="stylesheet" href="static/styles/modals.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar" role="complementary" aria-label="Sidebar">
+      <div class="sidebar-header">
+        <div class="user-info">
+          <img src="static/styles/girl.jpg" alt="Current User Avatar" class="avatar">
+          <div>
+            <h2>Malaika</h2>
+            <span class="status-online">Active</span>
+          </div>
+        </div>
+        <button id="settingsBtn" class="icon-button" aria-label="Open Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search chats..." class="search-input" aria-label="Search Chats">
+      </div>
+
+      <div class="chats-list" id="chatsList" role="list" aria-label="Chat List"></div>
+
+      <button id="newChatBtn" class="new-chat-btn" aria-label="Start New Chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        New Chat
+      </button>
+    </div>
+
+    <!-- Main Chat Window -->
+    <div class="chat-window" id="chatWindow" role="main" aria-label="Chat Window">
+      <div class="chat-header" id="chatHeader"></div>
+      <div class="messages" id="messages" role="log" aria-live="polite"></div>
+      <div class="message-input-container">
+        <input type="text" id="messageInput" placeholder="Type a message..." class="message-input"
+          aria-label="Message Input">
+        <button id="sendMessageBtn" class="send-button" aria-label="Send Message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="settingsModalLabel">Settings</h2>
+        <button class="close-button" aria-label="Close Settings Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="setting-item">
+          <div class="setting-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span>Dark Mode</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="darkModeToggle" aria-label="Enable Dark Mode">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <div class="setting-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span>Notifications</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="notificationsToggle" checked aria-label="Enable Notifications">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/bot.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const messageInput = document.getElementById("messageInput");
+  const sendMessageBtn = document.getElementById("sendMessageBtn");
+  const messagesContainer = document.getElementById("messages");
+
+  // Function to append a message to the chat window
+  function appendMessage(content, sender) {
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message", sender);
+    messageElement.textContent = content;
+    messagesContainer.appendChild(messageElement);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to the bottom
+  }
+
+  // Function to send the message to the bot
+  async function sendMessage() {
+    const userMessage = messageInput.value.trim();
+
+    if (userMessage === "") {
+      return; // Ignore empty messages
+    }
+
+    // Append user message to the chat window
+    appendMessage(userMessage, "user");
+
+    // Clear the input field
+    messageInput.value = "";
+
+    try {
+      // Send the message to the bot using the `/get` endpoint
+      const response = await fetch(`/get?msg=${encodeURIComponent(userMessage)}`);
+      const botResponse = await response.text();
+
+      // Append bot response to the chat window
+      appendMessage(botResponse, "bot");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      appendMessage("An error occurred. Please try again.", "bot");
+    }
+  }
+
+  // Attach event listener to the Send button
+  sendMessageBtn.addEventListener("click", sendMessage);
+
+  // Allow sending messages by pressing Enter
+  messageInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  });
+});
+</script>
+</body>
+
+</html>
+
