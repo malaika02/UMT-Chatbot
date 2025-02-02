@@ -1,0 +1,108 @@
+% Basic Course Information
+% course(Code, Title, CreditHours, Prerequisite, Category).
+% Semester 1
+course(cc120, 'Application of Information & Communication Technologies', 2, none, core).
+course(cc120l, 'Application of Information & Communication Technologies Lab', 1, none, core).
+course(cc111, 'Programming Fundamentals', 3, none, core).
+course(cc111l, 'Programming Fundamentals Lab', 1, none, core).
+course(ma107, 'Calculus and Analytical Geometry', 3, none, core).
+course(en110, 'English-I', 3, none, core).
+course(isl112, 'Islamic Thought and Perspectives', 3, none, core).
+course(pol121, 'Pakistan: Ideology, Constitution, and Society', 3, none, core).
+course(cc141, 'Quantitative Reasoning – 1 (Discrete Structures)', 3, none, core).
+
+% Semester 2
+course(ns125, 'Applied Physics', 2, none, core).
+course(ns125l, 'Applied Physics Lab', 1, none, core).
+course(cc112, 'Object Oriented Programming', 3, cc111, core).
+course(cc112l, 'Object Oriented Programming Lab', 1, cc111, core).
+course(ma108, 'Multivariable Calculus', 3, ma107, core).
+course(en123, 'English-II', 3, en110, core).
+course(cc121, 'Digital Logic Design', 2, none, core).
+course(cc121l, 'Digital Logic Design Lab', 1, none, core).
+
+% Semester-Wise Distribution
+% semester(SemesterNumber, CourseList).
+semester(1, [cc120, cc120l, cc111, cc111l, ma107, en110, isl112, pol121, cc141]).
+semester(2, [ns125, ns125l, cc112, cc112l, ma108, en123, cc121, cc121l]).
+
+% Total Credit Hours Required for Graduation
+total_credit_hours_required(136).
+
+% Mandatory Courses for the Program
+mandatory_courses([cc111, cc112, ma107, en110, isl112, cc121, ma108, en123]).
+
+% Number of Elective Courses Required
+elective_courses_required(6).
+
+% Course Relationships
+% Define courses that build on prerequisites.
+builds_on(PrerequisiteCourse, Course) :-
+    course(_, Course, _, PrerequisiteCourse, _).
+
+% List courses with the same prerequisites.
+same_prerequisite_courses(Prerequisite, Courses) :-
+    findall(Title, (course(_, Title, _, Prerequisite, _), Prerequisite \= none), Courses).
+
+% Credit Hour Calculations
+semester_credit_hours(Semester, TotalCreditHours) :-
+    semester(Semester, Courses),
+    calculate_total_hours(Courses, TotalCreditHours).
+
+calculate_total_hours([], 0).
+calculate_total_hours([Code | Rest], Total) :-
+    course(Code, _, CreditHours, _, _),
+    calculate_total_hours(Rest, RestTotal),
+    Total is CreditHours + RestTotal.
+
+% General Queries
+% Retrieve course title by code
+get_course_title(Code, Title) :-
+    course(Code, Title, _, _, _).
+
+% Retrieve course code by title
+get_course_code(Title, Code) :-
+    course(Code, Title, _, _, _).
+
+% Check if a course has a prerequisite
+has_prerequisite(Code, Prerequisite) :-
+    course(Code, _, _, Prerequisite, _), Prerequisite \= none.
+
+% Retrieve prerequisite for a specific course
+get_prerequisite(CourseCode, Prerequisite) :-
+    course(CourseCode, _, _, Prerequisite, _),
+    (Prerequisite = none -> write('No prerequisite exists.');
+    course(Prerequisite, PrerequisiteTitle, _, _, _), write(PrerequisiteTitle)).
+
+% List all core courses
+core_courses(Courses) :-
+    findall(Title, course(_, Title, _, _, core), Courses).
+
+% List all elective courses
+elective_courses(Courses) :-
+    findall(Title, course(_, Title, _, _, elective), Courses).
+
+% Example Queries:
+% 1. Retrieve all courses for Semester 1:
+%    ?- semester(1, Courses).
+
+% 2. Find credit hours for Semester 2:
+%    ?- semester_credit_hours(2, TotalCreditHours).
+
+% 3. Check if a course has a prerequisite:
+%    ?- has_prerequisite(cc112, Prerequisite).
+
+% 4. Get the prerequisite for a specific course:
+%    ?- get_prerequisite(cc112, Prerequisite).
+
+% 5. Find courses that build on a specific prerequisite:
+%    ?- builds_on(cc111, Course).
+
+% 6. List all core courses:
+%    ?- core_courses(Courses).
+
+% 7. Retrieve course title by course code:
+%    ?- get_course_title(cc120, Title).
+
+% 8. Check total credit hours required for graduation:
+%    ?- total_credit_hours_required(Total).

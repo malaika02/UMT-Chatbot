@@ -1,0 +1,80 @@
+% Semester 1
+course(semester1, 'Programming Fundamentals').
+course(semester1, 'Discrete Structures').
+course(semester1, 'Introduction to Computing').
+course(semester1, 'English Composition and Comprehension').
+course(semester1, 'Islamic Studies/Ethics').
+
+% Semester 2
+course(semester2, 'Object Oriented Programming').
+course(semester2, 'Data Structures and Algorithms').
+course(semester2, 'Communication Skills').
+course(semester2, 'Calculus and Analytical Geometry').
+course(semester2, 'Pakistan Studies').
+
+% Semester 3
+course(semester3, 'Digital Logic Design').
+course(semester3, 'Software Engineering').
+course(semester3, 'Linear Algebra').
+course(semester3, 'Professional Practices').
+course(semester3, 'Probability and Statistics').
+
+% Semester 4
+course(semester4, 'Computer Organization and Assembly Language').
+course(semester4, 'Operating Systems').
+course(semester4, 'Database Systems').
+course(semester4, 'Differential Equations').
+course(semester4, 'Technical and Business Writing').
+
+% Semester 5
+course(semester5, 'Software Requirements Engineering').
+course(semester5, 'Web Engineering').
+course(semester5, 'Software Design and Architecture').
+course(semester5, 'Human Computer Interaction').
+course(semester5, 'Artificial Intelligence').
+
+% Semester 6
+course(semester6, 'Computer Networks').
+course(semester6, 'Software Construction and Development').
+course(semester6, 'Mobile Application Development').
+course(semester6, 'Enterprise Systems').
+course(semester6, 'Formal Methods in Software Engineering').
+
+% Semester 7
+course(semester7, 'Software Quality Engineering').
+course(semester7, 'Cloud Computing').
+course(semester7, 'Information Security').
+course(semester7, 'Final Year Project I').
+
+% Semester 8
+course(semester8, 'Professional Ethics').
+course(semester8, 'Software Project Management').
+course(semester8, 'Final Year Project II').
+
+% Prerequisites
+prerequisite('Object Oriented Programming', 'Programming Fundamentals').
+prerequisite('Data Structures and Algorithms', 'Programming Fundamentals').
+prerequisite('Data Structures and Algorithms', 'Discrete Structures').
+prerequisite('Software Engineering', 'Object Oriented Programming').
+prerequisite('Software Engineering', 'Data Structures and Algorithms').
+prerequisite('Database Systems', 'Programming Fundamentals').
+prerequisite('Operating Systems', 'Digital Logic Design').
+prerequisite('Web Engineering', 'Database Systems').
+prerequisite('Artificial Intelligence', 'Data Structures and Algorithms').
+prerequisite('Mobile Application Development', 'Object Oriented Programming').
+prerequisite('Cloud Computing', 'Computer Networks').
+prerequisite('Information Security', 'Computer Networks').
+prerequisite('Final Year Project II', 'Final Year Project I').
+
+% Query Examples
+% Check if a course is part of a semester
+is_in_semester(Course, Semester) :- course(Semester, Course).
+
+% List all courses in a semester
+list_courses(Semester, Courses) :- findall(Course, course(Semester, Course), Courses).
+
+% Check prerequisites for a course
+has_prerequisite(Course, Prerequisite) :- prerequisite(Course, Prerequisite).
+
+% List prerequisites for a course
+list_prerequisites(Course, Prerequisites) :- findall(Prerequisite, prerequisite(Course, Prerequisite), Prerequisites).
